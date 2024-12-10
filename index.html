@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIPA UE Calculator</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scrollable-content">
+      <header>
+        <nav>
+          <a href="#">S1</a>
+          <a href="#">S2</a>
+          <a href="#">S3</a>
+          <a href="#">S4</a>
+          <a href="#">S5</a>
+          <a href="#">S6</a>
+        </nav>
+      </header>
+
+      <div class="logo-container">
+        <img src="assets/logo_ensta.png" alt="Logo ENSTA" />
+      </div>
+
+      <h1>Calcul de Moyenne pour le Semestre 1</h1>
+
+      <!-- Sélection de la spécialité -->
+      <div class="specialty-select">
+        <label for="specialty">Choisissez votre spécialité :</label>
+        <select id="specialty" class="styled-select">
+          <option value="SE">Systèmes Embarqués (SE)</option>
+          <option value="MECA">Mécanique (MECA)</option>
+        </select>
+      </div>
+
+      <!-- Conteneur des UE -->
+      <div id="ue-container">
+        <!-- Les UE avec leurs matières et résultats seront générés ici -->
+      </div>
+
+      <!-- Bouton pour calculer toutes les moyennes -->
+      <button id="calculateAllBtn">Calculer Toutes les UE</button>
+
+      <footer>
+        <p>© 2024 Jocelyn</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

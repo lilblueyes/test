@@ -1,0 +1,304 @@
+html,
+body {
+  background: radial-gradient(circle, #1c2421, #121212);
+  color: #fff;
+  font-family: "Cabinet Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrollable-content {
+  height: 100%; /* Prend toute la hauteur de la page */
+  overflow-y: scroll; /* Active le défilement vertical */
+  scrollbar-width: none; /* Cache la barre de défilement sur Firefox */
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement sur Chrome, Safari et Edge */
+}
+
+header {
+  z-index: 1000;
+}
+
+.scrollable-content {
+  padding-left: 25px;
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* Pour empiler les éléments verticalement */
+  align-items: center;
+  position: fixed; /* Fixe le header sur le côté gauche */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  margin: 15px 0;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+.logo-container {
+  position: fixed;
+  top: 35px;
+  right: 50px;
+}
+
+.logo-container img {
+  width: 150px;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2em;
+  padding-top: 60px;
+}
+
+.specialty-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 40px;
+}
+
+.specialty-select label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Styles pour les éléments select et input */
+.styled-select,
+.styled-input {
+  appearance: none;
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-select {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><path fill="%23ffffff" d="M0 0l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 5px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.styled-select:hover,
+.styled-input:hover {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.styled-select:focus,
+.styled-input:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.styled-input::-webkit-outer-spin-button,
+.styled-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.styled-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Styles pour les blocs UE */
+#ue-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ue-block {
+  display: flex;
+  flex-direction: column; /* Organise le titre, entrées et résultats verticalement */
+  background: #1a1a1a;
+  border: 1px solid #555;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  gap: 15px; /* Ajoute un espacement entre les sections */
+}
+
+/* Titre de l'UE */
+.ue-block h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #1abc9c;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+/* Conteneur des entrées */
+.ue-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espace entre les lignes */
+}
+
+/* Formulaire des notes */
+.ue-inputs form > div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre le label et le champ */
+}
+
+.ue-inputs form label {
+  flex: 1;
+  font-size: 14px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+}
+
+/* Champs de saisie des notes */
+.ue-inputs form input[type="text"],
+.ue-inputs form input[type="number"] {
+  flex: 0 0 60px; /* Fixe une largeur de 60px */
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.ue-inputs form input[type="text"]:hover,
+.ue-inputs form input[type="number"]:hover {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+/* Moyenne cible et bouton calcul */
+.ue-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Espace entre la moyenne cible et le bouton */
+}
+
+.ue-actions input[type="number"] {
+  flex: 0 0 60px;
+  text-align: center;
+  padding: 6px 8px;
+  border: 1px solid #555;
+  background: #2a2a2a;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.ue-actions button {
+  background: #444;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.ue-actions button:hover {
+  background: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Résultats */
+.ue-results {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ue-results h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #1abc9c;
+}
+
+.ue-results p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Bouton Calculer Tout */
+#calculateAllBtn {
+  margin: 20px auto;
+  display: block;
+  background: #444;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#calculateAllBtn:hover {
+  background: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ue-block {
+    flex-direction: column;
+  }
+
+  .ue-inputs {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .ue-results {
+    min-width: 100%;
+  }
+}
